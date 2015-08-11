@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GreetFriend</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="greetString">"Good Day "</string>
+    <string name="title_activity_show_message">ShowMessage</string>
+
+    <string-array name="friends">
+        <item>Dev</item>
+        <item>Steyn</item>
+        <item>George</item>
+        <item>Kallis</item>
+    </string-array>
+</resources>
