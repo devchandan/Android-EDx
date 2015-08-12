@@ -49,9 +49,27 @@ public class ChatClient extends AppCompatActivity implements View.OnClickListene
 
 
         // TODO RECYCLER VIEW
+        messageList = (RecyclerView) findViewById(R.id.messageList);
+        messageList.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        messageList.setLayoutManager(llm);
+        messageList.setAdapter(mAdapter);
+
 
 
         //TODO TOOLBAR
+        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+        setSupportActionBar(toolbar);                   // Setting toolbar as the ActionBar with setSupportActionBar() call
+
+        // get the friend's name from the Intent
+        Intent in = getIntent();
+        String friendName = in.getStringExtra(getString(R.string.friend));
+
+        // Set the toolbar title to friend's name. This is a little quirk
+        // that once you set the toolbar to be an ActionBar, you have to
+        // use this approach to set the title
+        getSupportActionBar().setTitle(friendName);
 
     }
 
